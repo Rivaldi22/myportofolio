@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="icon" href="assets/images/favicon1.png" type="image/png">
+  <title>Portfolio Programmer</title>
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<!-- Navbar -->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
       <a class="navbar-brand" href="#">MyPortfolio</a>
@@ -32,41 +32,47 @@
             </button>
           </li>
           <li class="nav-item">
-  <button class="btn btn-outline-light btn-sm ms-2" onclick="toggleLanguage()">
-    <i class="fas fa-globe"></i> <span id="lang-label">EN</span>
-  </button>
-</li>
+            <button class="btn btn-outline-light btn-sm ms-2" onclick="toggleLanguage()">
+              <i class="fas fa-globe"></i> <span id="lang-label">EN</span>
+            </button>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero text-center" data-aos="fade-up">
     <div class="container hero-content">
       <img src="assets/images/Myprofil.jpg" alt="Profile Photo" class="profile-img">
       <div>
         <h1 class="display-5">Hi, I'm a Web Programmer</h1>
-        <p class="lead">Specializing in PHP, Bootstrap, Flutter, and Frontend Development</p>
-        <a href="assets/CV_Rivaldi.pdf" class="btn btn-light mt-3" download>Download CV</a>
+        <p class="lead lang-id">Spesialisasi dalam PHP, Bootstrap, Flutter, dan Pengembangan Frontend</p>
+        <p class="lead lang-en d-none">Specializing in PHP, Bootstrap, Flutter, and Frontend Development</p>
+        <a href="assets/CV.pdf" class="btn btn-light mt-3" download>Download CV</a>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about" class="py-5" data-aos="fade-up">
     <div class="container">
       <h2 class="mb-4">About Me</h2>
-      <p class="lang-id">
-      Saya seorang programmer web yang fokus pada pengembangan aplikasi responsif dan interaktif.
-    </p>
-    <p class="lang-en d-none">
-      I am a web programmer focusing on developing responsive and interactive applications.
-    </p>
+      <p class="lang-id">Saya adalah seorang programmer web yang fokus pada pengembangan aplikasi responsif dan interaktif. 
+        Dengan keahlian dalam HTML, CSS, JavaScript, dan framework modern seperti Bootstrap dan React, saya berkomitmen untuk 
+        menciptakan antarmuka pengguna yang menarik dan mudah digunakan di berbagai perangkat. Selain itu, saya juga berpengalaman 
+        dalam menggunakan backend PHP dan MySQL untuk membangun sistem yang efisien dan aman. Tujuan saya adalah mengembangkan 
+        solusi digital yang tidak hanya fungsional, tetapi juga memberikan pengalaman pengguna yang optimal dan sesuai dengan 
+        kebutuhan bisnis klien.</p>
+      <p class="lang-en d-none">I am a web programmer who focuses on developing responsive and interactive applications. 
+        With expertise in HTML, CSS, JavaScript, and modern frameworks such as Bootstrap and React, I am committed to creating 
+        attractive and easy-to-use user interfaces across devices. In addition, I am also experienced in using PHP and MySQL 
+        backends to build efficient and secure systems. My goal is to develop digital solutions that are not only functional, 
+        but also provide optimal user experiences and are in line with the client's business needs.</p>
     </div>
   </section>
 
-  <!-- Skills Section -->
+  <!-- Skills -->
   <section id="skills" class="py-5" data-aos="fade-up">
     <div class="container">
       <h2 class="mb-4">Skills</h2>
@@ -78,42 +84,72 @@
         </div>
         <div class="col-md-6">
           <div class="skill-item"><i class="fab fa-github skill-icon"></i>Version Control (GitHub)</div>
-          <div class="skill-item"><i class="fas fa-code skill-icon"></i>Dart</div>
+          <div class="skill-item"><i class="fas fa-code skill-icon"></i>Dart (Flutter)</div>
           
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects -->
   <section id="projects" class="py-5" data-aos="fade-up">
     <div class="container">
       <h2 class="mb-4">Projects</h2>
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card project-card">
-            <img src="assets/images/project1.png" class="card-img-top" alt="Screenshot of Project One" title="Project One">
+            <img src="assets/images/project1.png" class="card-img-top" alt="Project 1">
             <div class="card-body">
-              <h5 class="card-title">Project One</h5>
-              <p class="card-text">Website Digitalisasi Promosi.</p>
+              <h5 class="card-title">Project Satu</h5>
+              <p class="card-text lang-id">Situs web digitalisasi promosi produk.</p>
+              <p class="card-text lang-en d-none">Product promotion digitalization website.</p>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card project-card">
-            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Project 2">
+        <!-- Tambahkan project lain seperti di atas -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog" class="py-5" data-aos="fade-up">
+    <div class="container">
+      <h2 class="mb-4">Blog</h2>
+      <div class="d-flex flex-wrap justify-content-between mb-3">
+        <div class="btn-group mb-2" role="group">
+          <button class="btn btn-outline-primary active" onclick="filterBlog('all')">All</button>
+          <button class="btn btn-outline-primary" onclick="filterBlog('web')">Web</button>
+          <button class="btn btn-outline-primary" onclick="filterBlog('Flutter')">Android</button>
+        </div>
+        <input type="text" id="blogSearch" class="form-control w-50" placeholder="Search blog..." onkeyup="searchBlog()">
+      </div>
+      <div class="row g-4" id="blogList">
+        <div class="col-md-6 blog-item" data-category="web">
+          <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Project Two</h5>
-              <p class="card-text">Responsive Bootstrap design.</p>
+              <h5 class="card-title">Tips Menggunakan Bootstrap</h5>
+              <p class="card-text lang-id">Pelajari cara menggunakan komponen-komponen Bootstrap agar pengembangan web lebih cepat.</p>
+              <p class="card-text lang-en d-none">Learn how to use Bootstrap components for faster web development.</p>
+              <a href="#" class="btn btn-primary btn-sm">Read More</a>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card project-card">
-            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Project 3">
+        <!-- Tambahkan blog lain -->
+         <div class="col-md-6 blog-item" data-category="Flutter">
+          <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Project Three</h5>
-              <p class="card-text">Front-end and back-end integration.</p>
+              <h5 class="card-title">Tips Menggunakan Flutter</h5>
+              <p class="card-text lang-id">Untuk memaksimalkan penggunaan Flutter, mulailah dengan memahami konsep dasar widget karena hampir 
+                semua elemen di Flutter dibangun dari widget. Gunakan Hot Reload untuk mempercepat proses pengembangan dan debugging. 
+                Jaga struktur kode tetap modular dengan memisahkan widget ke dalam file terpisah agar lebih mudah dikelola. Manfaatkan pustaka 
+                seperti provider atau bloc untuk mengelola state aplikasi secara efisien, dan selalu uji tampilan di berbagai ukuran layar 
+                untuk memastikan responsivitas aplikasi.</p>
+              <p class="card-text lang-en d-none">To get the most out of Flutter, start by understanding the basic concept of widgets since 
+                almost every element in Flutter is built from widgets. Use Hot Reload to speed up the development and debugging process. 
+                Keep your code structure modular by separating widgets into separate files for easier management. Take advantage of libraries 
+                like provider or bloc to manage your app’s state efficiently, and always test your app’s display on different screen sizes to 
+                ensure responsiveness.</p>
+              <a href="#" class="btn btn-primary btn-sm">Read More</a>
             </div>
           </div>
         </div>
@@ -121,56 +157,7 @@
     </div>
   </section>
 
-<!-- Blog Section -->
-<section id="blog" class="py-5" data-aos="fade-up">
-  <div class="container">
-    <h2 class="mb-4">Blog</h2>
-
-    <!-- Filter & Search -->
-    <div class="d-flex flex-wrap justify-content-between mb-3">
-      <div class="btn-group mb-2" role="group">
-        <button class="btn btn-outline-primary active" onclick="filterBlog('all')">All</button>
-        <button class="btn btn-outline-primary" onclick="filterBlog('web')">Web</button>
-        <button class="btn btn-outline-primary" onclick="filterBlog('android')">Android</button>
-      </div>
-      <input type="text" id="blogSearch" class="form-control w-50" placeholder="Search blog..." onkeyup="searchBlog()">
-    </div>
-
-    <!-- Blog Cards -->
-    <div class="row g-4" id="blogList">
-      <div class="col-md-6 blog-item" data-category="web">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Tips Menggunakan Bootstrap</h5>
-            <p class="card-text">Pelajari cara menggunakan komponen-komponen Bootstrap agar pengembangan web lebih cepat.</p>
-            <a href="#" class="btn btn-primary btn-sm">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 blog-item" data-category="web">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Kenapa Memilih PHP untuk Web Dev?</h5>
-            <p class="card-text">Alasan-alasan memilih PHP sebagai bahasa pemrograman backend yang handal dan mudah dipelajari.</p>
-            <a href="#" class="btn btn-primary btn-sm">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 blog-item" data-category="android">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Memulai Flutter untuk Pemula</h5>
-            <p class="card-text">Panduan dasar menggunakan Flutter dan Dart untuk membuat aplikasi mobile Android/iOS.</p>
-            <a href="#" class="btn btn-primary btn-sm">Read More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Contact Section -->
+    <!-- Contact Section -->
   <section id="contact" class="py-5" data-aos="fade-up">
     <div class="container">
       <h2 class="mb-4">Contact</h2>
@@ -183,7 +170,7 @@
     </div>
   </section>
 
-  <!-- Footer -->
+    <!-- Footer -->
   <footer class="py-3 text-center">
     <div class="container">
       <div class="mb-2">
